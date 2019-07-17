@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Welcome!</title>
+    </head>
+    <body>
+        <h1>Create your Character!</h1>
+        <p>Now it's time to chose your charecter's stats! You can either have a character who is strong but slow, a character that is fast but weak, or a balanced character that has some strength and speed. Please enter your choice of charecter stats strong, fast or balanced!</p>
+        <form method="post" action="/character_stats">
+            <input type="radio" name="stats" value="fast" required> Fast<br>
+            <input type="radio" name="stats" value="strong" required> Strong<br>
+            <input type="radio" name="stats" value="balance" required> Balance<br>
+            <input type="submit" value="Submit"/>
+            
+        </form>
+    </body>
+</html>

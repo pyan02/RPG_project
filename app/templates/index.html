@@ -2,11 +2,12 @@
     <head>
         <title>Welcome!</title>
     </head>
-    <body>
-        <h1>Hello world!</h1>
-        <p>We can build a full webpage here</p>
-        <form>
-            <input type="text" name="nickname" value="Enter your nickname"/>
+    <body style="background-image:url(https://i.pinimg.com/originals/70/5a/b0/705ab0974ced3b3ea81f0584f5d5a50f.png);">
+    
+        <h1>Welcome to our RPG!</h1>
+        <p>What is your charecter name?</p>
+        <form method="post" action="/character_creation">
+            <input type="text" name="nickname" required/>
             <input type="submit" value="Submit"/>
         </form>
     </body>
