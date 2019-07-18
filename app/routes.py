@@ -56,6 +56,16 @@ def town():
         vre = userdata['Town']
         town = vre.decode('utf-8')
         return render_template('town.html', town=town)
+        
+@app.route('/mystery',methods = ['GET','POST'])
+def mystery():
+    if request.method == 'GET':
+        return "Click on for a mystery"
+    else:
+        userdata = formopener.dict_from(request.form)
+        vre = userdata['Mystery']
+        mystery = vre.decode('utf-8')
+        return render_template('mystery.html', mystery=mystery)
 
 @app.route('/enemy',methods = ['GET','POST'])
 def enemy():
@@ -89,12 +99,22 @@ def fight():
 @app.route('/victory',methods = ['GET','POST'])
 def victory():
     if request.method == 'GET':
-        return "Click on for a move"
+        return "Click on for a victory"
     else:
         userdata = formopener.dict_from(request.form)
         vre = userdata['move']
         victory = vre.decode('utf-8')
         return render_template('victory.html', victory=victory)
+
+@app.route('/lose',methods = ['GET','POST'])
+def lose():
+    if request.method == 'GET':
+        return "Click on to continue"
+    else:
+        userdata = formopener.dict_from(request.form)
+        vre = userdata['lose']
+        lose = vre.decode('utf-8')
+        return render_template('lose.html', lose=lose)
 
 @app.route('/index',methods = ['GET','POST'])
 def start():
