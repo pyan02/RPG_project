@@ -1,11 +1,12 @@
 <html>
     <head>
-        <title>Welcome!</title>
+        <title>These are your stats!</title>
     </head>
     <body>
         <h1>Your character's stats have been decided.</h1>
         <p>{{stats}}</p>
-        <button type="button" action:"/town">To the town</button>
-        
+         <form method ="post" action = '/town'>
+            <input type="submit" name="Town" value="To the Town"/>
+        </form> 
     </body>
 </html>
