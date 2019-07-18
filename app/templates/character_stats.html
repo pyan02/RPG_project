@@ -2,6 +2,13 @@
     <head>
         <title>These are your stats!</title>
     </head>
+    <style>
+    input[type=submit] {
+        width:200px;  
+        height:100px;
+        font-size: 20px;
+    }
+    </style>
     <body>
         <h1>Your character's stats have been decided.</h1>
         <p>{{stats}}</p>
@@ -15,6 +22,10 @@
         
         <form method ="post" action = '/town'>
             <input type="submit" name="Town" value="To the Town"/>
+        </form>
+        
+        <form method ="post" action = '/mystery'>
+            <input type="submit" name="Mystery" value="To the Mystery"/>
         </form>
     </body>
 </html>
