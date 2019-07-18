@@ -5,8 +5,11 @@
     <body>
         <h1>Your character's stats have been decided.</h1>
         <p>{{stats}}</p>
+        <form method ="post" action = '/city'>
+            <input type="submit" name="City" value="To the City"/>
+        </form>
          <form method ="post" action = '/town'>
             <input type="submit" name="Town" value="To the Town"/>
-        </form> 
+        </form>
     </body>
 </html>

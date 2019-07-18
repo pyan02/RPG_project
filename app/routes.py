@@ -26,6 +26,16 @@ def character_stat():
         vre = userdata['stats']
         stats = model.stats(vre.decode('utf-8'))
         return render_template('character_stats.html', stats=stats)
+
+@app.route('/city',methods = ['GET','POST'])
+def city():
+    if request.method == 'GET':
+        return "Click on the city"
+    else:
+        userdata = formopener.dict_from(request.form)
+        vre = userdata['City']
+        city = vre.decode('utf-8')
+        return render_template('city.html', city=city)
         
 @app.route('/town',methods = ['GET','POST'])
 def town():
@@ -46,6 +56,15 @@ def enemy():
         vre = userdata['enemy']
         enemy = vre.decode('utf-8')
         return render_template('enemy.html', enemy=enemy)
+@app.route('/enemy2',methods = ['GET','POST'])
+def enemy2():
+    if request.method == 'GET':
+        return "Click on for enemy"
+    else:
+        userdata = formopener.dict_from(request.form)
+        vre = userdata['enemy2']
+        enemy2 = vre.decode('utf-8')
+        return render_template('enemy2.html', enemy2=enemy2)
 @app.route('/fight',methods = ['GET','POST'])
 def fight():
     if request.method == 'GET':
