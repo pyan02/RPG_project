@@ -37,6 +37,16 @@ def city():
         city = vre.decode('utf-8')
         return render_template('city.html', city=city)
         
+@app.route('/forest',methods = ['GET','POST'])
+def forest():
+    if request.method == 'GET':
+        return "Click on the forest"
+    else:
+        userdata = formopener.dict_from(request.form)
+        vre = userdata['Forest']
+        forest = vre.decode('utf-8')
+        return render_template('forest.html', forest=forest)
+        
 @app.route('/town',methods = ['GET','POST'])
 def town():
     if request.method == 'GET':
@@ -56,6 +66,7 @@ def enemy():
         vre = userdata['enemy']
         enemy = vre.decode('utf-8')
         return render_template('enemy.html', enemy=enemy)
+        
 @app.route('/enemy2',methods = ['GET','POST'])
 def enemy2():
     if request.method == 'GET':
