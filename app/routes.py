@@ -13,9 +13,9 @@ def character_creation():
         return "Please enter a name"
     else:
         userdata = formopener.dict_from(request.form)
-        vre = userdata['nickname']
-        nickname = vre.decode('utf-8')
-        return render_template('character_creation.html', nickname=nickname)
+        vre = userdata['choices']
+        choices = vre.decode('utf-8')
+        return render_template('character_creation.html', choices=choices)
 
 @app.route('/character_stats', methods = ['GET','POST'])
 def character_stat():
@@ -26,6 +26,16 @@ def character_stat():
         vre = userdata['stats']
         stats = model.stats(vre.decode('utf-8'))
         return render_template('character_stats.html', stats=stats)
+
+@app.route('/map', methods = ['GET','POST'])
+def maps():
+    if request.method == 'GET':
+        return "Please click for the map"
+    else:
+        userdata = formopener.dict_from(request.form)
+        vre = userdata['Map']
+        maps = model.stats(vre.decode('utf-8'))
+        return render_template('map.html', maps=maps)
 
 @app.route('/city',methods = ['GET','POST'])
 def city():

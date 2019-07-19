@@ -41,16 +41,25 @@
             height:50px;
             font-size: 20px;
         }
+        input[type=radio] {
+            font-size: 30px;
+        }
         
     </style>
     <body style="background-image:url(https://i.pinimg.com/originals/70/5a/b0/705ab0974ced3b3ea81f0584f5d5a50f.png);">
         <div class="h1">
-        <h1><b>Welcome to 8 BIT!</b></h1>
+        <h1><b>Welcome to r-p-g!</b></h1>
         </div>
         <p>What is your character name?</p>
         <div class="form">
         <form method="post" action="/character_creation">
-            <input type="text" name="nickname" required/>
+            <input type="text" name="choices" required/>
+        </form>
+        <p>Pick a gender</p>
+        <form method="post" action="/character_creation">
+            <input type="radio" name="choices" value="Boy" required/><label style="font-size:20px;"> Boy<br></label>
+            <input type="radio" name="choices" value="Girl" required/><label style="font-size:20px;"> Girl<br></label>
+            <input type="radio" name="choices" value="Other" required/><label style="font-size:20px;"> Other<br></label>
             <input type="submit" value="Submit"/>
         </form>
         </div>

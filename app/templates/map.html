@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>The Map</title>
+    </head>
+    <style>
+    input[type=submit] {
+        width:200px;  
+        height:100px;
+        font-size: 20px;
+    }
+    body {
+      background-image: url("https://naeu-icb2.s3.amazonaws.com/splash/8bit2/map-header.jpg");
+      background-repeat: no-repeat;
+      background-size:1400px 700px;
+    }
+    h1{
+        color:white;
+    }
+    </style>
+    <body>
+        <h1>THE MAP</h1>
+        
+        <form method ="post" action = '/city'>
+            <input type="submit" name="City" value="To the City"/>
+        </form>
+        
+        <form method ="post" action = '/forest'>
+            <input type="submit" name="Forest" value="To the Forest"/>
+        </form>
+         
+         <form method ="post" action = '/mystery'>
+            <input type="submit" name="Mystery" value="To the Mystery"/>
+        </form>
+        
+        <form method ="post" action = '/town'>
+            <input type="submit" name="Town" value="To the Town"/>
+        </form>
+        
+    </body>
+</html>
