@@ -5,18 +5,53 @@
     <style>
         p{
             font-size:15px;
+            color:white;
         }
-        
+        h1{
+            color:white;
+        }
+        body{
+            background-color: black;
+        }
+        form{
+            color:white;
+        }
+        img{
+            display:block;
+            margin-left:auto;
+            margin-right:auto;
+            width: 40%;
+        }
+        .h1{
+            color:white;
+            text-align: center;
+            animation-name:title;
+            animation-duration:6s;
+            animation-fill-mode:forwards;
+        }
+        @keyframes title{
+            0%{
+                transform: scale(0.1);
+                opacity:0;
+            }
+            60%{
+                transform: scale(1.2);
+                opacity:1;
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
     </style>
     <body>
-        <h1>Create your Character!</h1>
+        <div class = "h1"><h1>Create your Character!</h1></div>
         <p>Now it's time to chose your character's stats! You can either have a character who is strong but slow, a character that is fast but weak, or a balanced character that has some strength and speed. Please enter your choice of character stats strong, fast or balanced!</p>
         <form method="post" action="/character_stats">
             <input type="radio" name="stats" value="fast" required> Fast<br>
             <input type="radio" name="stats" value="strong" required> Strong<br>
             <input type="radio" name="stats" value="balance" required> Balance<br>
             <input type="submit" value="Submit"/>
-            
         </form>
+        <img src = https://i.pinimg.com/originals/94/6e/06/946e065ebf6c68dbc30f7a162a04351d.gif alt = "Group of knights">
     </body>
 </html>
